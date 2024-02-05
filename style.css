@@ -369,17 +369,48 @@ footer .logo {
   align-self: flex-start;
 }
 footer .drawers {
-  margin: 1rem 0rem;
+  display: flex;
+  gap: 2rem;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+  padding: 0;
+  margin: 0;
+  flex-wrap: wrap;
 }
-footer .drawers .portion {
+footer .drawers .portion ul {
+  list-style: none;
+  display: flex;
+  gap: 1rem;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-direction: column;
+  padding: 0;
+  margin: 0;
+  flex-wrap: wrap;
+}
+footer .drawers .portion ul .main-item {
+  width: 17rem;
+}
+footer .drawers .portion ul .main-item a {
   display: flex;
   gap: 0;
   justify-content: space-between;
   align-items: center;
   flex-direction: row;
   padding: 0;
-  margin: 1rem 0rem;
+  margin: 0;
   flex-wrap: wrap;
+}
+footer .drawers .portion ul a {
+  text-decoration: none;
+  color: #36485C;
+}
+footer .drawers .portion ul li {
+  display: none;
+}
+footer .drawers .portion ul li.main-item {
+  display: block;
 }
 footer .copyright {
   font-size: 0.8rem;
@@ -516,5 +547,16 @@ footer .copyright .social {
   .container_6 .cards_group div.payment_card.gradient h2 {
     font-size: 3rem;
     width: 35%;
+  }
+  footer .drawers {
+    flex-direction: row;
+    align-self: flex-end;
+    align-items: flex-start;
+  }
+  footer .drawers .main-item img {
+    display: none;
+  }
+  footer .drawers .portion ul li {
+    display: block;
   }
 }/*# sourceMappingURL=style.css.map */

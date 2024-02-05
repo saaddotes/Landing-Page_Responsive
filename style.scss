@@ -316,10 +316,35 @@ footer {
     }
 
     .drawers {
-        margin: 1rem 0rem;
+        @include myDisplay($flex-direction: column, $gap: 2rem);
 
         .portion {
-            @include myDisplay($margin: 1rem 0rem)
+            ul {
+                list-style: none;
+                @include myDisplay($gap: 1rem, $flex-direction: column, $align-items: flex-start);
+
+                .main-item {
+                    width: 17rem;
+
+                    a {
+                        @include myDisplay();
+                    }
+
+                }
+
+                a {
+                    text-decoration: none;
+                    color: $primary;
+                }
+
+                li {
+                    display: none;
+                }
+
+                li.main-item {
+                    display: block;
+                }
+            }
         }
     }
 
@@ -464,6 +489,25 @@ footer {
 
 
 
+
+    }
+
+    footer {
+        .drawers {
+            flex-direction: row;
+            align-self: flex-end;
+            align-items: flex-start;
+            .main-item{
+                img{display: none;}
+            }
+            .portion {
+                ul {
+                    li {
+                        display: block;
+                    }
+                }
+            }
+        }
 
     }
 }
