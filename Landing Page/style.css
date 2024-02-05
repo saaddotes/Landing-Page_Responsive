@@ -1,0 +1,520 @@
+* {
+  padding: 0;
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  transition: 0.3s;
+}
+
+header {
+  display: flex;
+  gap: 0;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+  padding: 0;
+  margin: 1rem;
+  flex-wrap: wrap;
+}
+header ul {
+  display: flex;
+  gap: 2rem;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+  padding: 0;
+  margin: 0;
+  flex-wrap: wrap;
+  list-style: none;
+  order: 1;
+}
+header ul li.alter-item, header ul.special_list {
+  display: none;
+}
+header ul a {
+  text-decoration: none;
+  color: #36485C;
+}
+header ul li:hover a {
+  color: #4328EB;
+}
+
+.container_1 {
+  display: flex;
+  gap: 1rem;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+  padding: 1rem;
+  margin: 0;
+  flex-wrap: wrap;
+}
+.container_1 h1 {
+  font-size: 2rem;
+  color: black;
+  text-align: center;
+}
+.container_1 p {
+  font-size: 1rem;
+  color: #36485C;
+  text-align: center;
+}
+.container_1 div {
+  display: flex;
+  gap: 1rem;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+  padding: 0;
+  margin: 0;
+  flex-wrap: wrap;
+}
+.container_1 div button {
+  background-color: #4328EB;
+  color: #ffffff;
+  border-radius: 0.5rem;
+  border: 1px solid #4328EB;
+  width: 10rem;
+  height: 3.5rem;
+  padding: 0;
+  display: flex;
+  gap: 0;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-direction: row;
+  padding: 0;
+  margin: 0;
+  flex-wrap: wrap;
+}
+.container_1 div .transBtn {
+  background-color: #ffffff;
+  color: #4328EB;
+  border-radius: 0.5rem;
+  border: 1px solid #4328EB;
+  width: 10rem;
+  height: 3.5rem;
+  padding: 0rem;
+}
+.container_1 div img {
+  border-radius: 50%;
+  background-color: rgba(213, 207, 250, 0.5019607843);
+  padding: 0.5rem;
+}
+.container_1 div button:hover {
+  cursor: pointer;
+  background-color: #ffffff;
+  border-color: #4328EB;
+  color: #4328EB;
+  box-shadow: 2px 2px 5px #4328EB;
+}
+
+.container_2 {
+  background: url(images/designs-imgs/Gradient.png) no-repeat;
+  background-size: cover;
+  display: flex;
+  gap: 0;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+  padding: 0;
+  margin: 0;
+  flex-wrap: wrap;
+}
+.container_2 img {
+  width: 85%;
+}
+.container_2 ul {
+  display: flex;
+  gap: 2rem;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  padding: 0rem 0rem 5rem 0rem;
+  margin: 0;
+  flex-wrap: wrap;
+  list-style: none;
+}
+.container_2 ul a {
+  text-decoration: none;
+  color: #ffffff;
+}
+
+.container_3 .features_card {
+  display: flex;
+  gap: 2rem;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+  padding: 2rem 1rem;
+  margin: 3rem 0rem;
+  flex-wrap: wrap;
+}
+.container_3 .features_card h3 {
+  color: #0085FF;
+}
+.container_3 .features_card ul {
+  list-style: url(images/designs-imgs/check.svg);
+  list-style-position: inside;
+}
+.container_3 .features_card img {
+  width: 100%;
+  border-radius: 5px;
+}
+.container_3 .features_card button {
+  background-color: #ffffff;
+  color: #0085FF;
+  border-radius: 0.5rem;
+  border: none;
+  width: 10rem;
+  height: 3.5rem;
+  padding: 1rem 0rem;
+  display: flex;
+  gap: 0;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-direction: row;
+  padding: 0.5rem 1rem;
+  margin: 0;
+  flex-wrap: wrap;
+  width: 8rem;
+  height: auto;
+  box-sizing: content-box;
+}
+.container_3 .features_card button img {
+  width: 1rem;
+  height: 1rem;
+  padding: 0.5rem;
+  background-color: #E3F1FF;
+  border-radius: 50%;
+}
+.container_3 .features_card button:hover {
+  border: 1px solid #E3F1FF;
+  box-shadow: 2px 2px 5px #4328EB;
+  cursor: pointer;
+}
+
+.container_4 {
+  display: flex;
+  gap: 2rem;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+  padding: 3rem 1rem;
+  margin: 10rem 0rem;
+  flex-wrap: wrap;
+  background-color: #F4F8FA;
+}
+.container_4 p {
+  color: #36485C;
+  text-align: center;
+}
+.container_4 .seniors_cards {
+  display: flex;
+  gap: 0.3rem;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  padding: 0;
+  margin: 0;
+  flex-wrap: wrap;
+  overflow: hidden;
+  height: 8rem;
+}
+.container_4 .seniors_cards img {
+  height: 4rem;
+}
+
+.container_5 {
+  display: flex;
+  gap: 1.5rem;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+  padding: 1rem;
+  margin: 0;
+  flex-wrap: wrap;
+}
+.container_5 h4 {
+  color: #EB2891;
+}
+.container_5 p {
+  color: #36485C;
+}
+.container_5 div .card {
+  background-color: #E3F1FF;
+  padding: 1rem;
+  margin: 1rem 0rem;
+}
+.container_5 div .card div {
+  display: flex;
+  gap: 0;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+  padding: 0;
+  margin: 0;
+  flex-wrap: wrap;
+}
+.container_5 div .card div p {
+  width: 80%;
+}
+.container_5 div .card .specialPra {
+  margin-top: 1rem;
+}
+
+.container_6 {
+  display: flex;
+  gap: 2rem;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+  padding: 1rem;
+  margin: 0;
+  flex-wrap: wrap;
+}
+.container_6 .cards_group {
+  display: flex;
+  gap: 1.5rem;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+  padding: 0;
+  margin: 0;
+  flex-wrap: wrap;
+}
+.container_6 .cards_group div.payment_card {
+  display: flex;
+  gap: 1rem;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+  padding: 1rem;
+  margin: 0;
+  flex-wrap: wrap;
+  border-radius: 1rem;
+  align-items: flex-start;
+  background-color: #F5F4FF;
+  width: 90%;
+}
+.container_6 .cards_group div.payment_card h5 {
+  color: #4328EB;
+}
+.container_6 .cards_group div.payment_card ul {
+  list-style: url(images/designs-imgs/check.svg);
+  list-style-position: inside;
+}
+.container_6 .cards_group div.payment_card button {
+  background-color: #ffffff;
+  color: #4328EB;
+  border-radius: 0.5rem;
+  border: none;
+  width: 20rem;
+  height: 3.5rem;
+  padding: 1rem 0rem;
+  align-self: center;
+}
+.container_6 .cards_group div.payment_card button:hover {
+  background-color: #4328EB;
+  color: #ffffff;
+  border: 1px solid #ffffff;
+  cursor: pointer;
+}
+.container_6 .cards_group div.payment_card.special {
+  background-color: #4328EB;
+  color: #ffffff;
+}
+.container_6 .cards_group div.payment_card.special h5 {
+  color: #ffffff;
+}
+.container_6 .cards_group div.payment_card div button {
+  width: 10rem;
+}
+.container_6 .cards_group div.payment_card.gradient {
+  color: #ffffff;
+  text-align: center;
+  background: url(images/designs-imgs/Gradient.png) no-repeat center;
+}
+.container_6 .cards_group div.payment_card.gradient .transBtn {
+  background-color: transparent;
+  color: #ffffff;
+  border-radius: 0.5rem;
+  border: none;
+  width: 10rem;
+  height: 3.5rem;
+  padding: 1rem 0rem;
+}
+.container_6 .cards_group div.payment_card.gradient .transBtn:hover {
+  border: 1px solid #4328EB;
+  color: #4328EB;
+}
+
+footer {
+  display: flex;
+  gap: 2rem;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+  padding: 2rem;
+  margin: 0;
+  flex-wrap: wrap;
+}
+footer .logo {
+  display: flex;
+  gap: 1rem;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: row;
+  padding: 0;
+  margin: 0;
+  flex-wrap: wrap;
+  align-self: flex-start;
+}
+footer .drawers {
+  margin: 1rem 0rem;
+}
+footer .drawers .portion {
+  display: flex;
+  gap: 0;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+  padding: 0;
+  margin: 1rem 0rem;
+  flex-wrap: wrap;
+}
+footer .copyright {
+  font-size: 0.8rem;
+  margin-top: 3rem;
+}
+footer .copyright .social {
+  display: flex;
+  gap: 0;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: row;
+  padding: 0;
+  margin: 2rem 0rem;
+  flex-wrap: wrap;
+}
+
+@media only screen and (min-width: 600px) {
+  header ul li.alter-item {
+    display: inline;
+  }
+  header ul li.alter-item-2 {
+    display: none;
+  }
+  header .special_list {
+    display: flex !important;
+    order: 0;
+  }
+  .container_1 h1 {
+    width: 30%;
+  }
+  .container_1 p {
+    width: 40%;
+  }
+  .container_3 {
+    display: flex;
+    gap: 6rem 0rem;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    padding: 0;
+    margin: 0;
+    flex-wrap: wrap;
+  }
+  .container_3 .features_card {
+    display: flex;
+    gap: 0;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-direction: column;
+    padding: 5rem 0rem 0rem 8rem;
+    margin: 0;
+    flex-wrap: wrap;
+    height: 30rem;
+  }
+  .container_3 .features_card img {
+    width: 35%;
+    height: 100%;
+    order: 1;
+  }
+  .container_3 .features_card .leftImg {
+    order: -1;
+  }
+  .container_3 .features_card p {
+    width: 20%;
+  }
+  .container_4 p {
+    width: 50%;
+  }
+  .container_4 .seniors_cards {
+    height: auto;
+    gap: 0rem;
+  }
+  .container_4 .seniors_cards img {
+    padding: 1rem;
+    height: 13rem;
+  }
+  .container_5 {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 1rem 5rem;
+    margin: 8rem 0rem;
+    flex-wrap: wrap;
+    height: 30rem;
+  }
+  .container_5 p {
+    width: 25%;
+  }
+  .container_5 div {
+    width: 60%;
+  }
+  .container_5 div img {
+    padding: 0.5rem;
+    cursor: pointer;
+  }
+  .container_5 div .card {
+    width: 100%;
+  }
+  .container_5 div .card div {
+    width: 100%;
+  }
+  .container_5 div .card .specialPra {
+    width: 70%;
+  }
+  .container_6 .cards_group {
+    display: flex;
+    gap: 1rem 0rem;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: row;
+    padding: 0;
+    margin: 0;
+    flex-wrap: wrap;
+    height: 50rem;
+  }
+  .container_6 .cards_group div.payment_card {
+    width: 30%;
+    height: 20rem;
+  }
+  .container_6 .cards_group div.payment_card.gradient {
+    width: 95%;
+    align-self: center;
+    display: flex;
+    gap: 0;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    padding: 3rem 1rem;
+    margin: 0;
+    flex-wrap: wrap;
+  }
+  .container_6 .cards_group div.payment_card.gradient h2 {
+    font-size: 3rem;
+    width: 35%;
+  }
+}/*# sourceMappingURL=style.css.map */

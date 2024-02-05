@@ -1,0 +1,469 @@
+$primary: #36485C;
+$white: #ffffff;
+$btns-blue: #4328EB;
+$card_blue: #0085FF;
+$btns-blue-bg: #E3F1FF;
+$btns-green: #00A424;
+$btns-green-bg: #DCFCDD;
+$btns-pink: #EB2891;
+$btns-pink-bg: #FDE7F3;
+$card-payment: #F5F4FF;
+
+* {
+    padding: 0;
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    // box-sizing: border-box;
+    transition: 0.3s;
+}
+
+@mixin myDisplay($display: flex, $gap: 0, $justify-content : space-between, $flex-direction: row, $padding: 0, $margin : 0, $flex-wrap: wrap, $align-items: center) {
+    display: $display;
+    gap: $gap;
+    justify-content: $justify-content;
+    align-items: $align-items;
+    flex-direction: $flex-direction;
+    padding: $padding ;
+    margin: $margin;
+    flex-wrap: $flex-wrap;
+}
+
+@mixin fontStyle($font-size : 1rem, $color : black) {
+    font-size: $font-size;
+    color: $color ;
+    text-align: center;
+}
+
+@mixin buttonStyle($background-color : white, $color : black, $border : none, $padding: 1rem 0rem, $width: 10rem) {
+    background-color: $background-color;
+    color: $color ;
+    border-radius: 0.5rem;
+    border: $border;
+    width: $width;
+    height: 3.5rem;
+    padding: $padding;
+
+}
+
+
+header {
+    @include myDisplay($margin: 1rem);
+
+    ul {
+        @include myDisplay($gap: 2rem);
+        list-style: none;
+        order: 1;
+
+        li.alter-item,
+        &.special_list {
+            display: none;
+        }
+
+        a {
+            text-decoration: none;
+            color: $primary;
+        }
+
+        li:hover a {
+            color: $btns-blue;
+        }
+
+    }
+
+
+}
+
+.container_1 {
+
+    @include myDisplay($flex-direction : column, $gap : 1rem, $padding: 1rem);
+
+    h1 {
+        @include fontStyle($font-size : 2rem)
+    }
+
+    p {
+        @include fontStyle($color : $primary)
+    }
+
+    div {
+
+        @include myDisplay($gap: 1rem);
+
+        button {
+            @include buttonStyle($btns-blue, $white, $border: 1px solid $btns-blue, $padding: 0);
+            @include myDisplay($justify-content: space-evenly)
+        }
+
+        .transBtn {
+            @include buttonStyle($white, $btns-blue , $border: 1px solid $btns-blue, $padding: 0rem)
+        }
+
+        img {
+            border-radius: 50%;
+            background-color: #D5CFFA80;
+            padding: 0.5rem;
+        }
+
+
+        button:hover {
+            cursor: pointer;
+            background-color: $white;
+            border-color: $btns-blue;
+            color: $btns-blue;
+            box-shadow: 2px 2px 5px $btns-blue;
+        }
+    }
+}
+
+.container_2 {
+    background: url(images/designs-imgs/Gradient.png) no-repeat;
+    background-size: cover;
+    @include myDisplay($flex-direction: column);
+
+    img {
+        width: 85%;
+    }
+
+    ul {
+        @include myDisplay($justify-content: center, $gap: 2rem, $padding: 0rem 0rem 5rem 0rem);
+        list-style: none;
+
+        a {
+            text-decoration: none;
+            color: $white;
+        }
+    }
+}
+
+.container_3 {
+    .features_card {
+        @include myDisplay($gap : 2rem, $padding: 2rem 1rem, $margin: 3rem 0rem);
+
+        h3 {
+            color: $card_blue;
+        }
+
+        ul {
+            list-style: url(images/designs-imgs/check.svg);
+            list-style-position: inside;
+        }
+
+        img {
+            width: 100%;
+            border-radius: 5px
+        }
+
+        button {
+            @include buttonStyle($white, $card_blue);
+            @include myDisplay($justify-content: space-evenly, $padding: 0.5rem 1rem);
+            width: 8rem;
+            height: auto;
+            box-sizing: content-box;
+
+            img {
+                width: 1rem;
+                height: 1rem;
+                padding: 0.5rem;
+                background-color: $btns-blue-bg;
+                border-radius: 50%;
+            }
+
+            &:hover {
+                border: 1px solid $btns-blue-bg;
+                box-shadow: 2px 2px 5px $btns-blue;
+                cursor: pointer;
+            }
+        }
+
+    }
+
+}
+
+.container_4 {
+    @include myDisplay($flex-direction: column, $gap: 2rem, $padding: 3rem 1rem, $margin: 10rem 0rem);
+    background-color: #F4F8FA;
+
+    p {
+        color: $primary;
+        text-align: center;
+    }
+
+    .seniors_cards {
+        @include myDisplay($justify-content: center, $gap: 0.3rem);
+        overflow: hidden;
+        height: 8rem;
+
+        img {
+            height: 4rem;
+        }
+    }
+}
+
+.container_5 {
+    @include myDisplay($padding: 1rem, $gap: 1.5rem);
+
+    h4 {
+        color: $btns-pink;
+    }
+
+    p {
+        color: $primary;
+    }
+
+    div {
+        .card {
+            background-color: $btns-blue-bg ;
+            padding: 1rem;
+            margin: 1rem 0rem;
+
+            div {
+                @include myDisplay();
+
+                p {
+                    width: 80%;
+                }
+            }
+
+            .specialPra {
+                margin-top: 1rem;
+            }
+        }
+    }
+}
+
+.container_6 {
+    @include myDisplay($padding: 1rem, $flex-direction: column, $gap: 2rem);
+
+    .cards_group {
+        @include myDisplay($gap: 1.5rem);
+
+        div.payment_card {
+            @include myDisplay($flex-direction: column, $gap: 1rem, $padding: 1rem);
+            border-radius: 1rem;
+            align-items: flex-start;
+            background-color: $card-payment;
+            width: 90%;
+
+            h5 {
+                color: $btns-blue;
+            }
+
+            ul {
+                list-style: url(images/designs-imgs/check.svg);
+                list-style-position: inside;
+            }
+
+            button {
+                @include buttonStyle($white, $btns-blue, $width: 20rem);
+                align-self: center;
+            }
+
+            button:hover {
+                background-color: $btns-blue;
+                color: $white;
+                border: 1px solid $white;
+                cursor: pointer;
+            }
+
+            &.special {
+                h5 {
+                    color: $white;
+                }
+
+                background-color: $btns-blue;
+                color: $white;
+
+
+            }
+
+            div {
+                button {
+                    width: 10rem;
+                }
+            }
+
+            &.gradient {
+
+
+                color: $white;
+                text-align: center;
+                background: url(images/designs-imgs/Gradient.png) no-repeat center;
+
+                .transBtn {
+                    @include buttonStyle(transparent, $white);
+
+                    &:hover {
+                        border: 1px solid $btns-blue;
+                        color: $btns-blue;
+                    }
+                }
+
+            }
+
+
+
+        }
+
+    }
+}
+
+footer {
+    @include myDisplay($padding: 2rem, $gap: 2rem, $flex-direction : column);
+
+    .logo {
+        @include myDisplay($justify-content: flex-start, $gap: 1rem);
+        align-self: flex-start;
+    }
+
+    .drawers {
+        margin: 1rem 0rem;
+
+        .portion {
+            @include myDisplay($margin: 1rem 0rem)
+        }
+    }
+
+    .copyright {
+        font-size: 0.8rem;
+        margin-top: 3rem;
+
+        .social {
+            @include myDisplay($justify-content: space-around, $margin: 2rem 0rem)
+        }
+    }
+
+}
+
+@media only screen and (min-width: 600px) {
+
+    header {
+        ul {
+            li.alter-item {
+                display: inline;
+            }
+        }
+
+        ul {
+            li.alter-item-2 {
+                display: none;
+            }
+        }
+
+        .special_list {
+            display: flex !important;
+            order: 0;
+        }
+    }
+
+    .container_1 {
+        h1 {
+            width: 30%;
+        }
+
+        p {
+            width: 40%;
+        }
+    }
+
+    .container_3 {
+        @include myDisplay($flex-direction: column, $gap: 6rem 0rem);
+
+        .features_card {
+            @include myDisplay($flex-direction: column, $padding : 5rem 0rem 0rem 8rem, $align-items :flex-start, $justify-content: space-between);
+            height: 30rem;
+
+            img {
+                width: 35%;
+                height: 100%;
+                order: 1;
+            }
+
+            .leftImg {
+                order: -1;
+            }
+
+            p {
+                width: 20%;
+            }
+        }
+
+    }
+
+    .container_4 {
+
+        p {
+            width: 50%;
+        }
+
+        .seniors_cards {
+            height: auto;
+            gap: 0rem;
+
+            img {
+                padding: 1rem;
+                height: 13rem;
+            }
+        }
+
+
+    }
+
+    .container_5 {
+        @include myDisplay($flex-direction: column, $justify-content: center, $gap: 1rem, $padding: 1rem 5rem, $margin: 8rem 0rem);
+        height: 30rem;
+
+
+        p {
+            width: 25%;
+        }
+
+        div {
+            width: 60%;
+
+            img {
+                padding: 0.5rem;
+                cursor: pointer;
+            }
+
+            .card {
+                width: 100%;
+
+                div {
+                    width: 100%;
+                }
+
+                .specialPra {
+                    width: 70%;
+                }
+            }
+        }
+    }
+
+    .container_6 {
+        .cards_group {
+            @include myDisplay($justify-content: space-around, $gap: 1rem 0rem);
+            height: 50rem;
+
+            div.payment_card {
+                width: 30%;
+                height: 20rem;
+
+                &.gradient {
+                    width: 95%;
+                    align-self: center;
+
+                    @include myDisplay($flex-direction: column, $padding: 3rem 1rem);
+
+                    h2 {
+                        font-size: 3rem;
+                        width: 35%;
+                    }
+                }
+            }
+        }
+
+
+
+
+    }
+}
